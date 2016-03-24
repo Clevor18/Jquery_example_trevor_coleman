@@ -242,7 +242,7 @@ $('#math').show();
 
 }else{
 	var multiply = num * 2;
-	$('#timesTwo').text(num +' times two equals ' + multiply);
+	$('#timesTwo').text(' ' + multiply);
 }
 });
 $('#divide').click(function() {
@@ -283,8 +283,9 @@ $('#sort').click(function() {
 		arr.push(prompt("enter a name"));
 		console.log(arr);
 		i++;
+
 	}
-	while (i<7);
+	while (i<4);
 	var sort = arr.sort()
 	$('#srt').show();
 	$('#sorted').text(sort);
@@ -304,6 +305,20 @@ $('#time').click(function(event) {
 	$('#stamp').css('color' , 'red')
 
 });
+$('#time').click(function(){
+	var dt = new Date();
+var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+console.log(time)
+})
+
+$('#sub').click(function(){
+	var name = document.getElementByName("fname");
+	alert(name);
+});
+$('#video').hide()
+$('#tvideo').click(function(){
+	$('#video').toggle()
+})
 $('#ctime').hide()
 $('#current').click(function(){
 $('#ctime').show()
